@@ -27,7 +27,8 @@
 
 # Support
 <p align='center'>
-  For any issue or help join our <a href='https://t.me/HackTronix_Hub'> Hub </a>
+  For any issue or help join our <a href='https://t.me/HackTronix_Hub'> Hub </a><br>
+  Contact me on Telegram for help @Cryptonian_007
   </p>
 
 # Warning
