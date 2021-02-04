@@ -7,6 +7,7 @@
 # Features
 
 * You can run unlimited accounts at the same time in order to add members
+* CSV files auto-distributer based on number of accounts to use
 * Powerful scraping tool that can scrape active members from any public group
 * You can add members both by username and by user ID
 * Least chances of account ban
