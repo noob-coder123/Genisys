@@ -1,0 +1,129 @@
+   ====================================
+      ____            _
+     / ___| ___ _ __ (_)___ _   _ ___
+    | |  _ / _ \ '_ \| / __| | | / __|
+    | |_| |  __/ | | | \__ \ |_| \__ \
+     \____|\___|_| |_|_|___/\__, |___/
+                            |___/
+   ====================================
+   Works best on PYTHON 3.8
+  ______________________________________________________________
+  |Genisys Telegram Scraper and Adder Pack V2.1                |
+  |Developer - Cryptonian[Telegram- @Cryptonian_007]           |
+  |Message for leechers- DON'T COPY CODE WITHOUT CREDITS BITCH!|
+  --------------------------------------------------------------
+
+  |NEW UPDATE||READ ONLY AFTER YOU'VE READ THE GUIDE|
+    
+  What's new?
+  --> Updates CSV file in case of keyboard interrupt (ctrl+C)
+  --> tsadder bug fixed
+  --> compatibility bugs fixed
+  --> Some bugs fixed
+  HOW TO USE MANUALADD.PY
+  You can manually add users. Choose an account, enter filename and the group then it'll add
+  IMPORTANT- Before using manualadd.py, distribute CSV files based on number of accounts you wanna use
+  using tsadder.pyc
+  You can add from many accs at a time using manual. Its just like tsadder, but only difference is that its not
+  automated. You can run the script from multiple accs at the same time
+  For example-
+    You launched manualadd.py and chose and account 'JOEY' to add users and you wanna run two accs
+    Then do this-
+        Relaunch manualadd.py. Don't close the previous window! It's adding users from JOEY acc
+        Choose another account suppose MARK. Then you'll have two windows in total
+        same script running from different accounts ;)
+        DO NOT USE THE SAME CSV FILE. THAT'S Y I TOLD TO DISTRIBUTE FILES USING TSADDER
+
+   |GOOD NEWS|
+   ---------
+   Though complete automation supports only windows, you can use manualadd.py in Termux(Android) or any
+   other platform and add users from many accs at the same time!
+   ---------
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||GUIDE||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+  |NOTE|
+
+  The folder is recommended to be stored in Desktop
+  Install libraries by opening cmd in the 'Genisys' folder and typing
+  >>> pip install -r requirements.txt
+
+  |ABOUT|
+
+  This is a simple guide that will help you to use this script properly
+
+  ||STEPS TO USE||
+
+  {MANAGER.py}
+
+  1) For scraping and adding , you need Telegram accounts
+   You can create new accounts in Telegram using virtual numbers
+
+  2) After you've created accounts, goto my.telegram.org
+
+  3) Perform user authentication
+
+  4) After that, goto API Development Tools. Fill out the form. Lastly, click on 'Other' radiobutton
+  then specify the reason in the textbox eg- 'App testing tool Telegram'
+
+  5) When you proceed, you'll get API id, API hash. we require it for manager.py
+
+  6) Now launch manager.py. Open cmd in the same location and type >>> python manager.pyc
+
+  7) If you are using for the first time, you can go for the first option
+  If you already have accounts and want to add new to existing, you can go for option 2
+
+  8) Enter the values. If you wanna use more than one account then type 'y' and enter
+
+----------  THE ACCOUNTS WILL BE STORED IN Vars.txt. DO NOT DELETE IT----------
+
+  9) If you have banned accounts and wanna remove them, then choose banfilter option
+  It'll intelligently remove all banned accounts and will update vars.txt
+==========================================================================================================
+  {SCRAPER.PY}
+
+  1) Before adding, you need users to scrape from a public group
+  2) So launch it in cmd
+  >>> python scraper.py
+  3) Enter username of the group from where you wanna scrape users
+  Suppose the username is @this_group
+  then enter 'this_group' in input[OMIT @]
+  [NOTE] Scraper will use the first account specified in vars.txt
+  [NOTE] The tool may ask for login code[only in first time login or no .session file]
+  Scrapped accounts will be saved in members.csv
+==========================================================================================================
+  {TSADDER.PY}
+
+  1) Now it's time to add users!
+  2) Launch in cmd
+  >>> python tsadder.py
+  3) Firstly, master script will create sessions for all the accounts
+  Enter required login code if it asks[you'll get in Tg app]
+  4) It'll intelligently filter all banned accounts and will use only the active ones
+  5) Next, same as scraper.py, it'll ask for public grp username. Enter the exact value
+  [UNIQUE] Then it'll join the public group from all accounts and will remove any accs that are banned in that grp
+  [RARE] After that, it'll divide values in members.csv into segments and will generate new CSV files according to 
+  the number of accounts to be used
+  Suppose I have 2 accounts, then members.csv will be redistributed into members0.csv and members1.csv
+  6) NEXT, it'll ask for number of accounts to use. Recommended[10 if you have more than 10 accounts]
+  7) Then it'll ask whether to add by username or by id. Choose the desired option
+  |What is add by id|
+  It means the users are added based on their user IDs. The entities are retrieved using their IDs
+  |What is add by username|
+  It means adding users based on their usernames. ONLY USERS HAVING USERNAMES WILL BE ADDED
+
+  |IMPORTANT|
+
+  TSADDER is a bit unusual. It retrieves users from members.csv and updates it. So if you run TSADDER many 
+  times(maybe due to errors or something) you are basically losing members from members.csv
+  You can scrape it again from the same group to get al the members
+
+  |ATTENTION|
+
+  AFTER STEP 7, READ WARNINGS CAREFULLY AND PROCEED. THIS WILL BE FULLY AUTOMATED.
+  WHEN COUNTDOWN STARTS, STAY AWAY FROM KEYBOARD AND MOUSE [STAY AWAY FROM PC]
+  MASTER SCRIPT WILL LAUNCH AS MANY CMD WINDOWS AS THE NUMBER OF ACCOUNTS USED
+  WAIT TILL YOU HEAR A BEEP SOUND
+  IF YOU DON'T HAVE SPEAKERS, WAIT TILL THE POP-UP STOPS
+  FOR THIS, YOUR PC MUST NOT BE TOO LAGGY ELSE IT'LL FREEZE
+  SO RECOMMENDED ACCOUNTS TO RUN AT ONCE IS 10
+=============================================================================================================
