@@ -1,4 +1,4 @@
-# Genisys
+# Genisys V2.1
 <p align='center'>
   Powerful Telegram Members Scraping and Adding Toolkit<br>
   <a href="https://t.me/joinchat/AAAAAEivg18nL5WJOPdokA"><img src="https://img.shields.io/badge/Telegram-HackTronix1-green"></a> <a href="https://www.instagram.com/cryptonian0"><img src="https://img.shields.io/badge/FollowOn-Instagram-green"></a>
