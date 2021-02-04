@@ -6,6 +6,7 @@
      \____|\___|_| |_|_|___/\__, |___/
                             |___/
    ====================================
+   #GenisysOnGithub
    Works best on PYTHON 3.8
   ______________________________________________________________
   |Genisys Telegram Scraper and Adder Pack V2.1                |
@@ -14,16 +15,11 @@
   --------------------------------------------------------------
 
   |NEW UPDATE||READ ONLY AFTER YOU'VE READ THE GUIDE|
-    
-  What's new?
-  --> Updates CSV file in case of keyboard interrupt (ctrl+C)
-  --> tsadder bug fixed
-  --> compatibility bugs fixed
-  --> Some bugs fixed
+  ---> tsadder.py major bug fixed
   HOW TO USE MANUALADD.PY
   You can manually add users. Choose an account, enter filename and the group then it'll add
   IMPORTANT- Before using manualadd.py, distribute CSV files based on number of accounts you wanna use
-  using tsadder.pyc
+  using tsadder.py
   You can add from many accs at a time using manual. Its just like tsadder, but only difference is that its not
   automated. You can run the script from multiple accs at the same time
   For example-
