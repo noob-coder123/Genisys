@@ -114,54 +114,32 @@ target_m = client.get_entity(scraped)
 client.get_participants(target_m, aggressive=True)
 print(f'{info}{g} Adding members to {group_name}{rs}\n')
 added_users = []
+lol = []
 for user in users:
-    added_users.append(user)
-    n += 1
-    if n % 50 == 0:
-        print(f'{sleep}{g} Sleep 2 min to prevent possible account ban{rs}')
-        time.sleep(120)
-    try:
-        print(user)
-        user_to_add = client.get_entity(user['id'])
-        client(InviteToChannelRequest(entity, [user_to_add]))
-        us_id = user['id']
-        print(f'{attempt}{g} Adding {us_id}{rs}')
-        print(f'{sleep}{g} Sleep 20s{rs}')
-        time.sleep(20)
-    except PeerFloodError:
-        print(f'\n{critical}{r} Aborted. Peer Flood Error{rs}')
-        count = 0
-        while count <= len(added_users):
-            del users[0]
-            count += 1
-        if not len(users) == 0:
-            with open(file, 'w', encoding='UTF-8') as f:
-                writer = csv.writer(f, delimiter=',', lineterminator='\n')
-                writer.writerow(['username', 'user id', 'access hash', 'group', 'group id'])
-                for user in users:
-                    writer.writerow([user['username'], user['id'], user['access_hash'], user['group'], user['group_id']])
-                f.close()  
-    except UserPrivacyRestrictedError:
-        print(f'{warning}{r} User Privacy Error[non-serious]{rs}')
-        continue
-    except ValueError:
-        print(f'{warning}{r} Error in processing entity{rs}')
-        continue
-    except KeyboardInterrupt:
-        print(f'{critical}{r} Aborted. Keyboard Interrupt{rs}')
-        update_list(users, added_users)
-        if not len(users) == 0:
-            print(f'{info}{g} Remaining users logged to {file}')
-            logger = Relog(users, file)
-            logger.start()
-    except Exception as e:
-        print(f'{warning}{r} Some Other error in adding{rs}')
-        print(e)
-        continue
-length = str(len(users))
-print(f'{info}{g}{length} attempts completed.')
-if os.name == 'nt':
-    os.system(f'del {file}')
-else:
-    os.system(f'rm {file}')
+    user_to_add = client.get_entity(user['id'])
+    lol.append(user_to_add)
+    if len(lol) == 5:
+        try:
+            client(InviteToChannelRequest(entity, lol))
+            lol = []
+            print(f'{attempt}{g} Adding 5 accounts...')
+            break
+        except PeerFloodError as e:
+            print(e)
+            break
+        except UserPrivacyRestrictedError:
+            print(f'{warning}{r} User Privacy Error[non-serious]{rs}')
+            break
+        except ValueError:
+            print(f'{warning}{r} Error in processing entity{rs}')
+            break
+        except KeyboardInterrupt:
+            break
+        except Exception as e:
+            print(f'{warning}{r} Some Other error in adding{rs}')
+            print(e)
+            break
+    else:
+        pass
+
 sys.exit()
