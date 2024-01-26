@@ -63,7 +63,7 @@
 
   5) When you proceed, you'll get API id, API hash. we require it for manager.py
 
-  6) Now launch manager.py. Open cmd in the same location and type >>> python manager.pyc
+  6) Now launch manager.py. Open cmd in the same location and type >>> python manager.py
 
   7) If you are using for the first time, you can go for the first option
   If you already have accounts and want to add new to existing, you can go for option 2
